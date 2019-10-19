@@ -17,10 +17,7 @@ aws_cli_command_args = {
     'provisioning_script': provisioning_script
 }
 
-aws_create_instance_cli_command ="""
-    aws ec2 run-instances --image-id {ami} --count {no_of_instances} \ 
-    --instance-type {instance_type} --key-name {keyPair} --user-data 'echo curl --silent --location https://rpm.nodesource.com/setup_10.x | bash - && yum install -y nodejs'
-    """.format(**aws_cli_command_args)
+aws_create_instance_cli_command = "aws ec2 run-instances --image-id {ami} --count {no_of_instances} --instance-type {instance_type} --key-name {keyPair} --user-data file://provisioning-scripts/{provisioning_script}".format(**aws_cli_command_args)
 
 print("Running aws cli command: ")
 print(aws_create_instance_cli_command)
