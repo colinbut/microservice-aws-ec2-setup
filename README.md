@@ -11,7 +11,7 @@ See https://github.com/colinbut/aws-public-private-vpc for more reference on to 
 
 [TBD]
 
-## Option 2 - IAC tool - Terraform/Cloudformation
+## Option 2 - Terraform/Cloudformation
 
 [TBD]
 
@@ -42,5 +42,5 @@ python create_ec2_instances.py
 The scripts basically just does the following underneath the hood:
 
 ```bash
-
+aws ec2 run-instances --image-id [ami-id] --count 1 --instance-type t2.micro --key-name [KeyPair Name] --user-data [provisioning script]
 ```
