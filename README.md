@@ -13,7 +13,16 @@ See https://github.com/colinbut/aws-public-private-vpc for more reference on to 
 
 ## Option 2 - Terraform/Cloudformation
 
-[TBD]
+Create S3 bucket to store terraform state
+
+```bash
+aws s3 mb s3://[name of bucket] --region [region]
+```
+
+Initialize Terraform Backend
+```bash
+terraform init
+```
 
 ## Option 3 - from pre-build tailored AMI
 
