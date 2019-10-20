@@ -22,6 +22,7 @@ See https://github.com/colinbut/aws-public-private-vpc for more reference on to 
 [TBD]
 
 ## Option 2 - Terraform/Cloudformation
+It is good to manage infrastructure changes and define them in 'code'. This option details how to do this via modern infrastructure as code tools such as __Terraform__ and __AWS Cloudformation__
 
 #### Terraform 
 Create S3 bucket to store terraform state. Need to ensure bucket is unique and also ideally within same region you want to provision your infrastructure resources onto.
@@ -56,7 +57,9 @@ terraform apply
 
 ## Option 3 - AWS CLI
 
-There's a pre-made `` script (available in both Bash & Python) that wraps around the AWS CLI command call. To use:
+Can also create the required EC2 instances via the __AWS CLI__
+
+There's a pre-made `create_ec2_instances` script (available in both Bash & Python) that wraps around the AWS CLI command call. To use:
 
 ```bash
 create_ec2_instances.sh
@@ -67,19 +70,23 @@ or using Python:
 python create_ec2_instances.py
 ```
 
-The scripts basically just does the following underneath the hood:
+The scripts basically just does the following aws cli command underneath the hood:
 
 ```bash
 aws ec2 run-instances --image-id [ami-id] --count 1 --instance-type t2.micro --key-name [KeyPair Name] --user-data [provisioning script]
 ```
 
-## Option 4 - from pre-build tailored AMI
+## Option 4 - from pre-build custom made AMI
 
-Uses Packer to build the AMI.
-Configure a Jenkins job that will validate the packer template whilst making changes.
+See the [microservice-ami](https://github.com/colinbut/microservice-ami.git) project for more details on the corresponding AMIs for the required development platform.
+
+Possible to uses Packer to build the AMI.
 
 To build & deploy to your AWS account:
 
+e.g. 
 ```bash
-packer build microservice-*.json
+packer build [microservice-*.json]
 ``` 
+
+The AMI can now be referenced in any of the above 3 methods of creating the EC2 instance.
