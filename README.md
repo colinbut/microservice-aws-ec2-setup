@@ -1,6 +1,6 @@
 # Microservice AWS EC2 Setup
 
-This project provides the steps/methods required for setup an EC2 instance for running the microservice as defined in the microservice-aws-demo project.
+This project provides the steps/methods required for setup an EC2 instance for running the microservice as defined in the [microservice-aws-demo](https://github.com/colinbut/microservice-aws-demo.git) project.
 
 There are many ways to setup EC2 instances in AWS:
 
@@ -15,7 +15,7 @@ There are many ways to setup EC2 instances in AWS:
 2. This project will create EC2 instances in the default VPC.
 
 3. To put in a custom non-default VPC require to create the custom non-default VPC.
-See https://github.com/colinbut/aws-public-private-vpc for more reference on to create this. 
+See my Terraform project - [aws-public-private-vpc](https://github.com/colinbut/aws-public-private-vpc) for more reference on to create this. 
 
 ## Option 1 - AWS Management Console
 
