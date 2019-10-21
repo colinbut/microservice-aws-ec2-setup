@@ -22,3 +22,7 @@ Outputs:
     Value: !GetAtt 
       - EC2Instance
       - PublicDnsName
+  ServerPublicIp:
+    Value: !GetAtt
+      - EC2Instance
+      - PublicIp 
