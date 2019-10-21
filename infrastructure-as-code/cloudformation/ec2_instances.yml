@@ -1,5 +1,10 @@
 AWSTemplateFormatVersion: "2010-09-09"
 Description: "Building an EC2 Instance"
+Parameters:
+  KeyName:
+    Description: "The name of the key pair to use for SSH access"
+    Type: String
+    # Type: AWS::EC2::KeyPair::KeyName
 Resources:
   EC2Instance:
     Type: AWS::EC2::Instance
