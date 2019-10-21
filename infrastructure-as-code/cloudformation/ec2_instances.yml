@@ -13,9 +13,10 @@ Resources:
       ImageId: ami-00a1270ce1e007c27
       # Use 'SecurityGroups for default VPC instead of SecurityGroupIds'
       SecurityGroups: ["WebDMZ"] # needs to be the Group Name of the Security Group
+      KeyName: !Ref KeyName
       Tags:
         - Key: Name
-          Value: "Server"
+          Value: "Microservice-Server"
 Outputs:
   ServerPublicDns:
     Value: !GetAtt 
