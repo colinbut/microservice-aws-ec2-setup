@@ -17,7 +17,7 @@ Resources:
         - Key: Name
           Value: "Server"
 Outputs:
-  ServerPublicIP:
+  ServerPublicDns:
     Value: !GetAtt 
       - EC2Instance
       - PublicDnsName
