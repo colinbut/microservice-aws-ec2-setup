@@ -52,8 +52,14 @@ terraform apply
 ```
 
 #### Cloudformation
-[TBD]
 
+Go to the Cloudformation directory and execute following command from the AWS CLI:
+
+```bash
+aws cloudformation create-stack --stack-name microservice-ec2-instance --template-body file://ec2_instances.yml
+```
+
+the --stack-name you can provide anything.
 
 ## Option 3 - AWS CLI
 
