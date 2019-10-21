@@ -1,0 +1,17 @@
+AWSTemplateFormatVersion: "2010-09-09"
+Description: "Building an EC2 Instance"
+Resources:
+  EC2Instance:
+    Type: AWS::EC2::Instance
+    Properties:
+      InstanceType: t2.micro
+      ImageId: ami-00a1270ce1e007c27
+      SecurityGroupsId: sg-0f89322a79aa4a404
+      Tags:
+        - Key: Name
+          Value: "Server"
+Outputs:
+  ServerPublicIP:
+    Value: !GetAtt 
+      - EC2Instance
+      - PublicDnsName
