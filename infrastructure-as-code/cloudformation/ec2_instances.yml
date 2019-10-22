@@ -17,6 +17,8 @@ Resources:
       Tags:
         - Key: Name
           Value: "Microservice-Server"
+        - Key: ProvisionedBy
+          Value: "Cloudformation"
 Outputs:
   ServerPublicDns:
     Value: !GetAtt 
