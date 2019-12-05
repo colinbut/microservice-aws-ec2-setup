@@ -2,6 +2,9 @@
 
 This project provides the steps/methods required for setup an EC2 instance for running the microservice as defined in the [microservice-aws-demo](https://github.com/colinbut/microservice-aws-demo.git) project.
 
+The microservice can be a containerized or a non-containerized microservice.
+See [microservice-java](https://github.com/colinbut/microservice-java.git) & [microservice-nodejs](https://github.com/colinbut/microservice-nodejs.git) projects for more details on this.
+
 There are many ways to setup EC2 instances in AWS:
 
 1) via __AWS mamagement console__ creating from scratch
