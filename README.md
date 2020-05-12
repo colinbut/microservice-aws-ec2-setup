@@ -22,7 +22,7 @@ See my Terraform project - [aws-public-private-vpc](https://github.com/colinbut/
 
 ## Option 1 - AWS Management Console
 
-[TBD]
+Follow the official AWW guide from AWS documentation - https://docs.aws.amazon.com/efs/latest/ug/gs-step-one-create-ec2-resources.html
 
 ## Option 2 - Terraform/Cloudformation
 It is good to manage infrastructure changes and define them in 'code'. This option details how to do this via modern infrastructure as code tools such as __Terraform__ and __AWS Cloudformation__
