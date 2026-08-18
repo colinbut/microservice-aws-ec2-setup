@@ -1,0 +1,11 @@
+apiVersion: backstage.io/v1alpha1
+kind: Component
+metadata:
+  name: "microservice-aws-ec2-setup"
+  description: infrastructure provisioning for aws ec2
+  tags:
+    - terraform
+spec:
+  type: infrastructure
+  owner: user:guest
+  lifecycle: production
